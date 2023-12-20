@@ -36,7 +36,7 @@ export function Footer() {
         <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
           <ContainerInner>
           
-          <div class="flex flex-col md:flex-row items-center md:items-baseline justify-between">
+          <div class="flex flex-col md:flex-row items-center md:items-end justify-between">
 
             <div className="w-full md:w-1/2">
 
