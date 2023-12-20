@@ -47,9 +47,8 @@ export function Footer() {
             </div>
 
 
-            <div className="flex gap-6 mt-4 md:mt-0">
+            <div className="flex gap-6 mt-4 md:mt-0 items-baseline">
 
-            w-full md:w-auto
               <SocialLink
                 href="https://twitter.com/heyitsfilipa"
                 aria-label="Follow on Twitter"
