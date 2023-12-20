@@ -1,0 +1,77 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import Image from 'next/image'
+import projectimage from '@/images/ethlisbon/ethlisbon_banner.png'
+import image1 from '@/images/ethlisbon/ethlisbon_1.png'
+import image2 from '@/images/ethlisbon/ethlisbon_2.png'
+import image3 from '@/images/ethlisbon/ethlisbon_3.png'
+import image4 from '@/images/ethlisbon/ethlisbon_4.png'
+import image6 from '@/images/ethlisbon/ethlisbon_6.png'
+import image7 from '@/images/ethlisbon/ethlisbon_7.png'
+import image8 from '@/images/ethlisbon/ethlisbon_8.png'
+import image9 from '@/images/ethlisbon/ethlisbon_9.png'
+import image10 from '@/images/ethlisbon/ethlisbon_10.png'
+import image11 from '@/images/ethlisbon/ethlisbon_11.png'
+
+export const project = {
+  author: 'Filipa Ribeiro',
+  date: '2023-11-01',
+  title: 'ETH Lisbon 2023',
+  description:
+    'Branding and landing page design for a community-led hackathon focused on Ethereum.',
+  thumbnail: {
+    src: projectimage.src,
+    width: 1200,
+    height: 400,
+  },
+  client: 'ETH Lisbon',
+  duration: 'May 2023 - Nov 2023',
+  role: 'Branding / Landing Page',
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+  client: project.client,
+  duration: project.duration,
+  role: project.role,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+<Image src={projectimage} alt="" />
+
+## Background 
+
+ETH Lisbon is a community-led hackathon focused on the Ethereum Community. Organized since 2021 in Lisbon, known by many as the crypto capital of Europe, ETH Lisbon wants to gather the best Ethereum builders in the world to create truly disruptive projects.
+
+<Image src={image1} alt="" />
+
+## Problem
+
+For their 2023 edition, ETH Lisbon needed a new visual identity and landing page to reflect their builder-focused mission and their functionality approach. They invited me to do the rebranding, and given my prior involvement with ETH Lisbon as a volunteer in past editions, I viewed it as an exciting chance to create a lively and fun identity that would capture the essence of this hackathon.
+
+<Image src={image3} alt="" />
+
+
+
+## Solution
+
+The new visual identity came from the traditional Portuguese tram already present in the previous identities and strongly connected with ETH Lisbon. We wanted to create a logo that represented both Lisbon, the Ethereum community and the hectic energy of an hackathon. At the same time, we wanted to stay true to the image that ETH Lisbon already had in the community and create something that could be built on what was already there.
+
+<Image src={image2} alt="" />
+
+<Image src={image4} alt="" />
+
+<Image src={image7} alt="" />
+
+<Image src={image6} alt="" />
+
+<Image src={image8} alt="" />
+
+## Landing Page
+
+The landing page was built using Framer, to allow everyone from the team to edit it in the future, without the barriers of code. It can be accessed here: www.ethlisbon.org
+
+<Image src={image10} alt="" />
+
+<Image src={image9} alt="" />

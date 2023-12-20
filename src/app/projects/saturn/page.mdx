@@ -1,0 +1,75 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import Image from 'next/image'
+import projectimage from '@/images/saturnportal/saturnportal_banner.png'
+import image1 from '@/images/saturnportal/saturnportal_1.png'
+import image2 from '@/images/saturnportal/saturnportal_2.png'
+import image3 from '@/images/saturnportal/saturnportal_3.png'
+import image4 from '@/images/saturnportal/saturnportal_4.png'
+import image5 from '@/images/saturnportal/saturnportal_5.png'
+
+export const project = {
+  author: 'Filipa Ribeiro',
+  date: '2023-11-10',
+  title: 'Saturn Portal',
+  description:
+    'A platform for Filecoin Saturn CDN users to manage their subscription plans and track their consumption of the network.',
+  thumbnail: {
+    src: projectimage.src,
+    width: 1200,
+    height: 400,
+  },
+  client: 'Protocol Labs (through Subvisual)',
+  duration: 'Aug 2023 - Oct 2023',
+  role: 'Product Designer',
+
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+  client: project.client,
+  duration: project.duration,
+  role: project.role,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+<Image src={projectimage} alt="" />
+
+## Problem
+
+[Filecoin Saturn](https://saturn.tech/) is a CDN that accelerates data stored on the Filecoin Network and IPFS. The Saturn network launched in Q4 2022 and by August 2023 — when this project began — there were over 2000 points of presence serving content.
+
+However, the onboarding process for new customers wanting to use the Saturn network to accelerate their content lacked a seamless and user-friendly experience. Customers faced challenges in **setting up**, **understanding cost**, and **analyzing network usage**. Additionally, a registration process for customers was necessary to **generate a UCAN keypair for network metering**.
+
+<Image src={image1} alt="" />
+
+## Solution
+
+Recognizing the need for an improved customer experience, [Protocol Labs](https://protocol.ai/) hired Subvisual to help them develop Saturn Portal — a platform aiming to address these pain points by enabling customers to easily set up their clients, and monitor their usage and costs. Our team for this project consisted of one product designer and two software developers who worked closely with the PL team.
+
+<Image src={image2} alt="" />
+
+We first started by going through the requirements list to grasp the project's scope and assess the need of each requirement. To facilitate this, we organized the requirements into different categories. This process generated a set of initial questions, some of which required further consideration. The helpful answers we got allowed us to delve into shaping the **Information Architecture** and primary **user flows** of the product.
+
+<Image src={image3} alt="" />
+
+Once the Information Architecture and main user flows were established, we transitioned to the **wireframing** stage, subsequently **testing the wireframes** with the Protocol Labs team. Through various tests and tweaks, we finally got to a more polished version of the MVP.
+
+<Image src={image4} alt="" />
+
+In this first version of the product, users are already able to:
+
+- Easily view information regarding their consumption and requests on the **Dashboard**;
+- Change their overage limit, alter or cancel their plan, and download receipts on the **Manage Subscription** page;
+- Quickly check the details of their integrations and the status of the service worker for each integration, and add new integrations on the **Integrations** page;
+- Edit their personal information, set up a 2FA mechanism, change their preferred payment method, and customize the portal theme on the **Settings** page.
+
+<Image src={image5} alt="" />
+
+## Outcomes and future developments
+
+The Protocol Labs team was very happy with the MVP of Saturn Portal. They plan to unveil its first version during Lab Week 23 at Devconnect in Istanbul, Turkey, this November. For the initial release, it will be invite-only for us to test it with a small group of people.
+
+After the launch, we will be conducting user tests and interviews with this first set of users to understand how they use the Portal and identify ways to enhance their overall experience. Our plan is to keep iterating on the user experience and iterface for the second version of the Saturn Portal.
+

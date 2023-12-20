@@ -1,0 +1,85 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import Image from 'next/image'
+import projectimage from '@/images/coffeeline/coffeeline_banner.png'
+import image1 from '@/images/coffeeline/coffeeline_1.png'
+import image2 from '@/images/coffeeline/coffeeline_2.png'
+import image3 from '@/images/coffeeline/coffeeline_3.png'
+import image4 from '@/images/coffeeline/coffeeline_4.png'
+import image5 from '@/images/coffeeline/coffeeline_5.png'
+
+
+export const project = {
+  author: 'Filipa Ribeiro',
+  date: '2022-06-01',
+  title: 'Coffeeline',
+  description:
+    'A platform to allow speciality coffee lovers to explore the journey of their favourite coffees from origin to the cup.',
+  thumbnail: {
+    src: projectimage.src,
+    width: 1200,
+    height: 400,
+  },
+
+  client: 'Self-initiated',
+  duration: 'May 2022 - Jun 2022',
+  role: 'Branding / Product Design',
+}
+
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+  client: project.client,
+  duration: project.duration,
+  role: project.role,
+}
+
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+<Image src={projectimage} alt="" />
+
+## Problem
+
+Coffee has become a daily necessity globally, but there has been a shift in how we enjoy it in recent times. People are increasingly paying closer attention to the coffee they consume, delving into various flavor profiles, and are more curious about the origin of the beans. This is where specialty coffee enters the scene. Distinguished by its non-mass-produced nature, each step in its production is carefully crafted for the best possible outcome: a better coffee experience for everyone involved. Emphasizing the coffee's origin has become more prominent on packaging, and to earn the designation of "specialty coffee" it must undergo a rigorous Specialty Coffee Association test, scoring over 80 out of 100 points.
+
+Despite this, **transparency in its supply chain remains a challenge**. As consumers, **how can we be certain the information we get is accurate?** How can we ensure that the higher-priced coffee truly meets specialty coffee standards? Also, when a barista suggests coffee from Ethiopia, Brazil, or Kenya, how do we decide without tasting it first?
+
+<Image src={image1} alt="" />
+
+## Solution
+
+Coffeeline was born having this problem in mind. It had its beginnings at the [Activate x Wormhole Miami](https://dorahacks.io/hackathon/25/detail) 2-day hackathon in May 2022. Our team — consisting of one product manager, two developers, and one designer — created a user-friendly method for scanning a QR code, granting access to the entire coffee journey from source to cup using the Celo blockchain. Apart from that, we also created a way for roasters to pay coffee producers directly in stablecoins, using the Celo blockchain.
+
+<Image src={image2} alt="" />
+
+Our 3 types of users were:
+
+1. The **Specialty coffee lover** who pays a premium for their product and wants to know where it came from, without needing to rely just on
+the information provided by the roaster.
+
+2. The **Coffee producers** who want to be paid accordingly to the quality of the product
+they produce, and want an easy, reliable and secure way of receiving money
+without paying crazy fees.
+
+3. The **Specialty Coffee Roasters** who need access to the history of the coffee they are buying in order to create better roaster profiles
+and to inform their customers about what they are consuming.
+
+This project ended up receiving a prize from Celo.
+
+<Image src={image3} alt="" />
+
+Later, I revisited this concept as a personal side project and conceived an app that would allow people to: 
+1. Scan a QR code to access comprehensive information about the coffee's supply chain securely recorded on an immutable blockchain;
+2. Locate and rate nearby coffee shops;
+3. Receive personalized coffee recommendations based on their reviews.
+
+<Image src={image4} alt="" />
+
+## Conclusion
+
+As a coffee enthusiast myself, I really enjoyed doing this small side-project because it aligns with my values and it is something I wish to have available for personal use. I strongly believe in the potential of blockchain technology to bring more transparency to complex global problems, particularly addressing the challenge of transparency in the supply chain. The historical association of coffee with exploitation and injustice only amplifies the complexity of the problem. 
+
+This was a very quick exercise, and obviously, many things could have been done in better ways, and field research was definitely missing. However, it made me think of ways we could merge design and the blockchain to create a better world for every being, not only for those who already know what a blockchain is.
+
+<Image src={image5} alt="" />

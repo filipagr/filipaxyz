@@ -1,0 +1,81 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import Image from 'next/image'
+import projectimage from '@/images/voicedeck/voicedeck_banner.png'
+import image1 from '@/images/voicedeck/voicedeck_1.png'
+import image2 from '@/images/voicedeck/voicedeck_2.png'
+import image3 from '@/images/voicedeck/voicedeck_3.png'
+import image4 from '@/images/voicedeck/voicedeck_4.png'
+import image5 from '@/images/voicedeck/voicedeck_5.png'
+import image6 from '@/images/voicedeck/voicedeck_6.png'
+import image7 from '@/images/voicedeck/voicedeck_7.png'
+import image8 from '@/images/voicedeck/voicedeck_8.png'
+
+export const project = {
+  author: 'Filipa Ribeiro',
+  date: '2023-08-01',
+  title: 'Voicedeck',
+  description:
+    'A platform to allow investigative journalism organizations to sell hypercerts of their impacts and get funding for their projects.',
+  thumbnail: {
+    src: projectimage.src,
+    width: 1200,
+    height: 400,
+  },
+  client: 'Voicedeck',
+  duration: 'Aug 2023 - current',
+  role: 'Branding / Product Design',
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+  client: project.client,
+  duration: project.duration,
+  role: project.role,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+<Image src={projectimage} alt="" />
+
+## Problem
+
+During the [Fund Public Goods Hackathon](https://app.buidlbox.io/ftc/fund-public-goods), organized by Funding the Commons and Gitcoin, I met Devansh Mehta — an investigative journalist from India — who was working on a specific challenge: **three citizen journalism media outlets in India sought to immortalize their extensive database of 10,000 impact reports on a public blockchain.** These reports comprise narratives from their network of rural reporters, shedding light on persistent community issues like absent government teachers, unpaid laborer wages, and inadequate access to clean water and electricity.
+
+By selling these impact certificates on a dedicated platform, the organizations aimed to provide compensation to those involved in the projects and secure funding for future endeavors.
+
+<Image src={image1} alt="" />
+
+## Solution
+
+Over the course of the three-week hackathon, our team — consisting of one journalist, one smart contract developer and one designer — developed a script that enables web2 nonprofits to transition their historical impact databases into hypercerts on the Goerli network.
+
+<Image src={image3} alt="" />
+
+Additionally, we built a prototype of [Voicedeck](https://app.buidlbox.io/projects/hypercerts-media): a platform to empower investigative journalism organizations to sell hypercerts representing their impacts and secure funding for their upcoming initiatives.
+
+<Image src={image4} alt="" />
+
+<Image src={image5} alt="" />
+
+## Branding
+
+To establish a distinct identity for both the product and the visual elements on the Buidlbox project page, I created a logo with the intent of encapsulating concepts such as sound, advocacy for meaningful causes, and a sense of proactive engagement. 
+
+<Image src={image6} alt="" />
+
+The selected font, [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans), represents a modern interpretation of geometric sans-serif styles, created by Gumpita Rahayu of Tokotype in 2020. This font was chosen not only for its visual appeal but also because it embodies the essence of diversity and it is available for public use under the SIL Open Font License.
+
+<Image src={image7} alt="" />
+
+Opting for a vibrant red as the primary color was a deliberate choice, aligning with Devansh's desire for a dynamic and unapologetic aesthetic. 
+
+<Image src={image8} alt="" />
+
+## Outcomes and future developments
+
+The Voicedeck project ended up winning two prizes at Fund Public Goods Hackathon: the second prize of the [“Improve the efficiency and scalability of public goods funding through deployment of new products, systems, and financial instruments”](https://app.buidlbox.io/ftc/fund-public-goods/challenges/a00bcc2f-07d1-4205-b1a1-ef3e223e3a03) track and the prize for the second best [public good project](https://app.buidlbox.io/ftc/fund-public-goods/challenges/445b9da7-6ee4-4896-b9d3-eb741e3fbc53).
+
+We are currently working on implementing a different Minimum Lovable Product with the collaboration of the [Pollen Labs](https://pollenlabs.org/) team, part of the Privacy and Scalling Explorations group of the Ethereum Foundation.
+
+<Image src={image2} alt="" />

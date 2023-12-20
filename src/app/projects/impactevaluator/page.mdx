@@ -1,0 +1,66 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import Image from 'next/image'
+import projectimage from '@/images/impactevaluator/impactevaluator_banner.png'
+import image1 from '@/images/impactevaluator/impactevaluator_1.png'
+import image2 from '@/images/impactevaluator/impactevaluator_2.png'
+import image3 from '@/images/impactevaluator/impactevaluator_3.png'
+import image4 from '@/images/impactevaluator/impactevaluator_4.png'
+import image5 from '@/images/impactevaluator/impactevaluator_5.png'
+
+export const project = {
+  author: 'Filipa Ribeiro',
+  date: '2023-10-30',
+  title: 'Impact Evaluator',
+  description:
+    'A platform to facilitate the evaluation and the retroactive funding of vital public goods.',
+    thumbnail: {
+    src: projectimage.src,
+    width: 1200,
+    height: 400,
+  },
+  client: 'Protocol Labs (through Subvisual)',
+  duration: 'Feb 2022 - Dec 2022',
+  role: 'Product Design',
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+  client: project.client,
+  duration: project.duration,
+  role: project.role,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+<Image src={projectimage} alt="" />
+
+## Problem
+
+[Protocol Labs](https://protocol.ai/) is a research, development, and deployment lab for various decentralized protocols and technologies. One of their projects is the Impact Evaluator, a funding mechanism designed for public goods, using Quadratic Funding.
+
+The team at Protocol Labs was already **using an Excel file to perform the impact evaluations, but it was a very long and tedious process**. Our goal was to provide an easier way for a community of evaluators to assess the impact of each outcome and its specific participants, in order for them to decide which projects would be retroactively funded and the amount of money they would receive.
+
+<Image src={image1} alt="" />
+
+## Solution
+
+In order to define and validate the problem and to develop a solution that met those needs, our team — one product designer, one product manager and one software developer — did an **event storming** exercise, mapped out the **user journey**, identified **pain points**, and proceeded to create some quick sketches of what the product could be. 
+
+<Image src={image2} alt="" />
+
+These first **wireframes** allowed the team to iterate on the design and come to a user-friendly and technically feasible solution, validating it through **user testing** and feedback with the Protocol Labs team.
+
+From this continuous process of testing and iterating, we finally got to the **high fidelity prototypes** of the MVP.
+
+<Image src={image3} alt="" />
+
+## Outcomes and future developments
+
+The Impact Evaluator not only provides an easier to use platform for the impact evaluation and funding of public goods projects but also streamlined the evaluation process for the evaluators’ team. With this new platform, **the average time to complete the impact evaluation process was reduced to around 1 hour**. These significant time savings were very important for the evaluators’ team.
+
+<Image src={image4} alt="" />
+
+Some of the planned future developments include a better mobile experience to allow evaluators to share their inputs on the go (the website is currently responsive, but a mobile focus is now required); integrating additional evaluation methods, and adding new features that would improve the overall user experience.
+
+<Image src={image5} alt="" />
