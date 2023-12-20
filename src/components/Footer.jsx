@@ -48,17 +48,17 @@ export function Footer() {
 
             <div className="flex gap-6">
               <SocialLink
-                href="https://twitter.com"
+                href="https://twitter.com/heyitsfilipa"
                 aria-label="Follow on Twitter"
                 icon={TwitterIcon}
               />
               <SocialLink
-                href="https://github.com"
+                href="https://github.com/filipagr"
                 aria-label="Follow on GitHub"
                 icon={GitHubIcon}
               />
               <SocialLink
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/filipagribeiro/"
                 aria-label="Follow on LinkedIn"
                 icon={LinkedInIcon}
               />
