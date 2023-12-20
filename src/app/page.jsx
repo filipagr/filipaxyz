@@ -35,7 +35,7 @@ export default async function Home() {
         <div className="max-w-2xl">
          
           <h1 className="text-3xl font-regular tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
-            Hello, I'm Filipa —
+            Hello, I&apos;m Filipa —
           </h1>
          
           <p className="text-3xl font-regular tracking-tight text-zinc-400 dark:text-zinc-400 sm:text-4xl">
