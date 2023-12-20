@@ -36,9 +36,9 @@ export function Footer() {
         <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
           <ContainerInner>
           
-          <div class="flex justify-between items-end sm:flex flex-col items-center">
+          <div class="sm: flex flex-col items-center md:flex flex-row justify-between items-end">
 
-            <div className="w-1/2 sm: w-full">
+            <div className="sm: w-full md: w-1/2">
               <h6 className="text-sm font-medium text-zinc-400 dark:text-zinc-500 mb-2">Colophon</h6>
               <div className="text-xs font-regular text-zinc-400 dark:text-zinc-500">
                   This website was designed and developed in 2023 by Filipa Ribeiro, using Spotlight Tailwind Template as a base. All assets are hosted by Netlify. Text is set in Manrope, designed by Mikhail Sharanda in 2018, and part of the Google Fonts library :)
@@ -46,7 +46,7 @@ export function Footer() {
             </div>
 
 
-            <div className="flex gap-6 sm: mt-8">
+            <div className="flex gap-6 sm: mt-8 md: mt-0">
               <SocialLink
                 href="https://twitter.com/heyitsfilipa"
                 aria-label="Follow on Twitter"
