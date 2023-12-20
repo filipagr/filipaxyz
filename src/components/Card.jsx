@@ -50,7 +50,7 @@ Card.Title = function CardTitle({ as, href, children }) {
   let Component = as ?? 'h2'
 
   return (
-    <Component className="text-lg mt-6 font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+    <Component className="text-lg mt-6 font-medium tracking-tight text-zinc-800 dark:text-zinc-100">
       {href ? <Card.Link href={href}>{children}</Card.Link> : children}
     </Component>
   )
