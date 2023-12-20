@@ -38,7 +38,7 @@ export function Footer() {
           
           <div class="flex justify-between items-end sm:flex flex-col items-center">
 
-            <div>
+            <div className="w-1/2 sm: w-full">
               <h6 className="text-sm font-medium text-zinc-400 dark:text-zinc-500 mb-2">Colophon</h6>
               <div className="text-xs font-regular text-zinc-400 dark:text-zinc-500">
                   This website was designed and developed in 2023 by Filipa Ribeiro, using Spotlight Tailwind Template as a base. All assets are hosted by Netlify. Text is set in Manrope, designed by Mikhail Sharanda in 2018, and part of the Google Fonts library :)
