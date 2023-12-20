@@ -71,17 +71,17 @@ Download CV
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-3xl font-regular tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
-          I'm a Product Designer with a background in Graphic Design, currently based in Portugal.
+          I&apos;m a Product Designer with a background in Graphic Design, currently based in Portugal.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
             I have always been very interested in people: their thoughts, emotions and reactions in different situations. Design is the way I have found to explore this interest and to try to make the world a better place.
             </p>
             <p>
-            When I am not working or studying, I'll probably be obsessing over something random, like ways to make great coffee, baking bread, Joni Mitchell or how it must be to live on a boat.
+            When I am not working or studying, I&apos;ll probably be obsessing over something random, like ways to make great coffee, baking bread, Joni Mitchell or how it must be to live on a boat.
             </p>
             <p>
-            At the moment, I'm exploring the potential of blockchain technologies and helping out web3 ventures at Subvisual↗. And I'm also training for my fourth marathon in February, 2024.
+            At the moment, I&apos;m exploring the potential of blockchain technologies and helping out web3 ventures at Subvisual↗. And I&apos;m also training for my fourth marathon in February, 2024.
             </p>
           </div>
 
