@@ -45,7 +45,7 @@ export function ProjectLayout({ project, children }) {
                 {project.title}
               </h1>
 
-              <div className='mt-8 flex justify-between text-sm text-zinc-600 dark:text-zinc-400 sm: flex-col'>
+              <div className='mt-8 flex flex-col text-sm text-zinc-600 dark:text-zinc-400 md: flex-row md: justify-between'>
                 
                 <div className="">
                   <h6 className='text-xs'>Client</h6>
@@ -53,12 +53,12 @@ export function ProjectLayout({ project, children }) {
                 </div>
 
                 <div className="">
-                  <h6 className='text-xs sm: mt-4'>Role</h6>
+                  <h6 className='text-xs mt-4 md: mt-0'>Role</h6>
                   <p className='font-medium'>{project.role}</p>
                 </div>
 
                 <div className="">
-                  <h6 className='text-xs sm: mt-4'>Duration</h6>
+                  <h6 className='text-xs mt-4 md: mt-0'>Duration</h6>
                   <p className='font-medium'>{project.duration}</p>
                 </div>
 
