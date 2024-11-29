@@ -75,7 +75,7 @@ Download CV
             When I am not working or studying, I&apos;ll probably be obsessing over something random, like ways to make great coffee, baking bread, Joni Mitchell or how it must be to live on a boat.
             </p>
             <p>
-            At the moment, I&apos;m exploring the potential of blockchain technologies and helping out web3 ventures at <a href="https://subvisual.com/">Subvisual</a>. And I&apos;m also training for my fourth marathon in February, 2024.
+            At the moment, I&apos;m exploring the potential of blockchain technologies and decentralized storage at <a href="https://fil.org/">Filecoin Foundation</a>. And I&apos;m also training for my sixth marathon in April, 2025.
             </p>
           </div>
 
