@@ -1,0 +1,111 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import Image from 'next/image'
+import projectimage from '@/images/saturnportal/saturnportal_banner.webp'
+import image1 from '@/images/saturnportal/saturnportal_1.webp'
+import image2 from '@/images/saturnportal/saturnportal_2.webp'
+import image3 from '@/images/saturnportal/saturnportal_3.webp'
+import image4 from '@/images/saturnportal/saturnportal_4.webp'
+import image5 from '@/images/saturnportal/saturnportal_5.webp'
+
+export const project = {
+  author: 'Filipa Ribeiro',
+  date: '2023-11-10',
+  title: 'FIP Tracker Tool',
+  description:
+    'A FIP (Filecoin Improvement Proposals) tracker tool for the Filecoin community.',
+  thumbnail: {
+    src: projectimage.src,
+    width: 1200,
+    height: 400,
+  },
+  client: 'Filecoin Foundation',
+  duration: 'May 2024 - Jun 2024',
+  role: 'Product Designer',
+
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+  client: project.client,
+  duration: project.duration,
+  role: project.role,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+<Image src={projectimage} alt="" />
+
+## Problem
+
+[Filecoin](https://filecoin.io/) is a decentralized storage network designed to store humanity’s most important information. To continuously improve and evolve the network, the Filecoin community follows a structured governance process through **Filecoin Improvement Proposals (FIPs)**.
+
+Currently, FIPs are managed primarily on [GitHub](https://github.com/filecoin-project/FIPs), which serves as the source of truth. However, relying solely on GitHub, non-technical users and broader community members find it difficult to engage with and track FIP progress. 
+
+<Image src={image1} alt="" />
+
+To address this issue, a dedicated and user-friendly FIP Tracker was needed. Rather than creating a standalone tool, the idea was to integrate the tracker into Metropolis, an existing tool originally designed as a no-binding sentiment check platform for the Filecoin community. Centralizing the FIP tracker within Metropolis would streamline governance participation, ensuring that all relevant discussions, updates, and sentiment checks exist in one place.
+
+This FIP Tracker would need to:
+
+- **Provide a structured, easy-to-navigate dashboard** for tracking FIP statuses.
+
+- **Automatically sync with GitHub**, ensuring real-time updates while keeping GitHub as the source of truth.
+
+- **Improve accessibility** for both technical and non-technical users by offering a clear and intuitive interface.
+
+- **Enhance engagement** by enabling notifications and filtering.
+
+<Image src={image2} alt="" />
+
+## Process
+
+I worked closely with Kaitlin Beegle (Head of Governance), Lucky Nwachukwu (Governance Project Manager), and Ian Davis (Engineer) to define the core requirements for this tool. Together, we outlined the essential information that needed to be displayed for each FIP:
+
+- Title
+
+- Creators
+
+- Creation Date
+
+- Status
+
+- Type
+
+- Link to GitHub
+
+- Additional proposal details
+
+We also identified that if a FIP reached the "Last Call" stage, the tool needed to display a countdown timer indicating how many days were left before the proposal was finalized.
+
+## Challenges & Solutions
+
+The biggest challenge was accommodating the **eight different FIP statuses** while ensuring **clarity and ease of use**. We tackled this by implementing color-coded status labels, making it easy for users to distinguish between different proposal stages at a glance.
+
+We also prioritized search and filtering capabilities to enhance usability. Users needed to:
+
+- Search FIPs by keywords.
+
+- Filter FIPs by Authors, Status, Date, and Type.
+
+- Sort FIPs by Newest to Oldest, Oldest to Newest, Status, and Authors (alphabetical order).
+
+Since the dashboard contained a high density of information, we introduced customization features allowing users to show or hide specific details, such as:
+
+- Authors
+
+- Creation Date
+
+- Type
+
+- Category
+
+This level of personalization ensured that users could customize the tool to their needs, improving their overall experience.
+
+To prevent information overload while maintaining necessary details, I explored multiple ways to visualize the data. The final solution presented a clean, structured layout, allowing users to expand a proposal card for more details when needed.
+
+Each status was color-coded, ensuring quick recognition and differentiation between proposal stages.
+
+## Implementation & Current Status
+
+The tool has since been developed by an external contractor and renamed to FIL Poll. An MVP is currently in progress and being tested with various ecosystem participants to refine its usability and effectiveness.
