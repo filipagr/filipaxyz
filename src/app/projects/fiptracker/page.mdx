@@ -1,11 +1,11 @@
 import { ProjectLayout } from '@/components/ProjectLayout'
 import Image from 'next/image'
-import projectimage from '@/images/saturnportal/saturnportal_banner.webp'
-import image1 from '@/images/saturnportal/saturnportal_1.webp'
-import image2 from '@/images/saturnportal/saturnportal_2.webp'
-import image3 from '@/images/saturnportal/saturnportal_3.webp'
-import image4 from '@/images/saturnportal/saturnportal_4.webp'
-import image5 from '@/images/saturnportal/saturnportal_5.webp'
+import projectimage from '@/images/fiptracker/fiptracker_banner.webp'
+import image1 from '@/images/fiptracker/fiptracker_1.webp'
+import image2 from '@/images/fiptracker/fiptracker_2.webp'
+import image3 from '@/images/fiptracker/fiptracker_3.webp'
+import image4 from '@/images/fiptracker/fiptracker_4.webp'
+import image5 from '@/images/fiptracker/fiptracker_5.webp'
 
 export const project = {
   author: 'Filipa Ribeiro',
@@ -40,11 +40,11 @@ export default (props) => <ProjectLayout project={project} {...props} />
 
 [Filecoin](https://filecoin.io/) is a decentralized storage network designed to store humanity’s most important information. To continuously improve and evolve the network, the Filecoin community follows a structured governance process through **Filecoin Improvement Proposals (FIPs)**.
 
-Currently, FIPs are managed primarily on [GitHub](https://github.com/filecoin-project/FIPs), which serves as the source of truth. However, relying solely on GitHub, non-technical users and broader community members find it difficult to engage with and track FIP progress. 
-
-<Image src={image1} alt="" />
+Currently, FIPs are managed primarily on [GitHub](https://github.com/filecoin-project/FIPs), which serves as the source of truth. However, relying solely on GitHub, non-technical users and broader community members find it difficult to engage with and track FIP progress.
 
 To address this issue, a dedicated and user-friendly FIP Tracker was needed. Rather than creating a standalone tool, the idea was to integrate the tracker into Metropolis, an existing tool originally designed as a no-binding sentiment check platform for the Filecoin community. Centralizing the FIP tracker within Metropolis would streamline governance participation, ensuring that all relevant discussions, updates, and sentiment checks exist in one place.
+
+<Image src={image1} alt="" />
 
 This FIP Tracker would need to:
 
@@ -55,8 +55,6 @@ This FIP Tracker would need to:
 - **Improve accessibility** for both technical and non-technical users by offering a clear and intuitive interface.
 
 - **Enhance engagement** by enabling notifications and filtering.
-
-<Image src={image2} alt="" />
 
 ## Process
 
@@ -82,6 +80,8 @@ We also identified that if a FIP reached the "Last Call" stage, the tool needed 
 
 The biggest challenge was accommodating the **eight different FIP statuses** while ensuring **clarity and ease of use**. We tackled this by implementing color-coded status labels, making it easy for users to distinguish between different proposal stages at a glance.
 
+<Image src={image2} alt="" />
+
 We also **prioritized search and filtering capabilities to enhance usability**. Users needed to:
 
 - Search FIPs by keywords.
@@ -100,12 +100,18 @@ Since the dashboard contained a high density of information, we introduced custo
 
 - Category
 
+<Image src={image3} alt="" />
+
 This level of personalization ensured that users could customize the tool to their needs, improving their overall experience.
 
 To prevent information overload while maintaining necessary details, I explored multiple ways to visualize the data. The final solution presented a clean, structured layout, allowing users to expand a proposal card for more details when needed.
 
 Each status was color-coded, ensuring quick recognition and differentiation between proposal stages.
 
+<Image src={image4} alt="" />
+
 ## Implementation & Current Status
 
-The tool has since been developed by an external contractor and renamed to FIL Poll. An [MVP](https://poll.fil.org/dashboard/fip_tracker) is currently in progress and being tested with various ecosystem participants to refine its usability and effectiveness.
+The tool has since been developed by an external contractor and renamed to FIL Poll. An MVP is currently in progress and being tested with various ecosystem participants to refine its usability and effectiveness.
+
+<Image src={image4} alt="" />
