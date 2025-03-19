@@ -12,7 +12,7 @@ export const project = {
   date: '2023-11-10',
   title: 'FIP Tracker Tool',
   description:
-    'A FIP (Filecoin Improvement Proposals) tracker tool for the Filecoin community.',
+    'A Filecoin Improvement Proposals tracker tool for the broader Filecoin community.',
   thumbnail: {
     src: projectimage.src,
     width: 1200,
@@ -60,21 +60,21 @@ This FIP Tracker would need to:
 
 ## Process
 
-I worked closely with Kaitlin Beegle (Head of Governance), Lucky Nwachukwu (Governance Project Manager), and Ian Davis (Engineer) to define the core requirements for this tool. Together, we outlined the essential information that needed to be displayed for each FIP:
+I worked closely with the Filecoin head of governance, a governance project manager, and an engineer to define the core requirements for this tool. Together, we outlined the essential information that needed to be displayed for each FIP:
 
-- Title
+- **Title**
 
-- Creators
+- **Authors**
 
-- Creation Date
+- **Creation Date**
 
-- Status
+- **Status**
 
-- Type
+- **Type**
 
-- Link to GitHub
+- **Link to GitHub**
 
-- Additional proposal details
+- **Additional proposal details**
 
 We also identified that if a FIP reached the "Last Call" stage, the tool needed to display a countdown timer indicating how many days were left before the proposal was finalized.
 
@@ -82,7 +82,7 @@ We also identified that if a FIP reached the "Last Call" stage, the tool needed 
 
 The biggest challenge was accommodating the **eight different FIP statuses** while ensuring **clarity and ease of use**. We tackled this by implementing color-coded status labels, making it easy for users to distinguish between different proposal stages at a glance.
 
-We also prioritized search and filtering capabilities to enhance usability. Users needed to:
+We also **prioritized search and filtering capabilities to enhance usability**. Users needed to:
 
 - Search FIPs by keywords.
 
@@ -90,7 +90,7 @@ We also prioritized search and filtering capabilities to enhance usability. User
 
 - Sort FIPs by Newest to Oldest, Oldest to Newest, Status, and Authors (alphabetical order).
 
-Since the dashboard contained a high density of information, we introduced customization features allowing users to show or hide specific details, such as:
+Since the dashboard contained a high density of information, we introduced customization features allowing users to **show or hide specific details**, such as:
 
 - Authors
 
@@ -108,4 +108,4 @@ Each status was color-coded, ensuring quick recognition and differentiation betw
 
 ## Implementation & Current Status
 
-The tool has since been developed by an external contractor and renamed to FIL Poll. An MVP is currently in progress and being tested with various ecosystem participants to refine its usability and effectiveness.
+The tool has since been developed by an external contractor and renamed to FIL Poll. An [MVP](https://poll.fil.org/dashboard/fip_tracker) is currently in progress and being tested with various ecosystem participants to refine its usability and effectiveness.
