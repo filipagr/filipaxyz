@@ -1,4 +1,4 @@
-import { ProjectLayout } from '../../../components/ProjectLayout'
+import { ProjectLayout } from '@/components/ProjectLayout'
 
 export default function Layout({ children, metadata }) {
   const project = metadata?.project ?? {}
