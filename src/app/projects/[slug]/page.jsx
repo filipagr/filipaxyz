@@ -2,11 +2,13 @@ import fs from 'fs'
 import path from 'path'
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync(path.join(process.cwd(), 'app/projects'))
+  const projectDir = path.join(process.cwd(), 'app/projects')
+  const files = fs.readdirSync(projectDir)
+
   return files
-    .filter((file) => file.endsWith('.mdx'))
-    .map((file) => ({
-      slug: file.replace('.mdx', ''),
+    .filter((file) => fs.statSync(path.join(projectDir, file)).isDirectory())
+    .map((folderName) => ({
+      slug: folderName,
     }))
 }
 
