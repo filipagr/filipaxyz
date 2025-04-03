@@ -33,6 +33,8 @@ export const metadata = {
   project,
 }
 
+---
+
 <Image src={projectimage} alt="FIP Tracker Banner" className="rounded-xl mb-10" />
 
 ## Problem
@@ -101,4 +103,8 @@ The tool has since been developed by an external contractor and renamed to FIL P
 
 <Image src={image1} alt="FIL Poll interface" className="rounded-xl my-8" />
 
-export default (props) => <ProjectLayout project={project} {...props} />
+---
+
+export default function LayoutWrapper(props) {
+  return <ProjectLayout project={project}>{props.children}</ProjectLayout>
+}
