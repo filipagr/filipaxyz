@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 export async function generateStaticParams() {
-  const projectDir = path.join(process.cwd(), 'app/projects')
+  const projectDir = path.join(process.cwd(), 'src/app/projects')
   const files = fs.readdirSync(projectDir)
 
   return files
