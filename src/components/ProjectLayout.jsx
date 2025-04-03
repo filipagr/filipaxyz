@@ -20,7 +20,7 @@ function ArrowLeftIcon(props) {
   )
 }
 
-export function ProjectLayout({ project, children }) {
+export default function ProjectLayout({ project, children }) {
   let router = useRouter()
   let { previousPathname } = useContext(AppContext)
 
