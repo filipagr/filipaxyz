@@ -1,8 +1,9 @@
 import { ProjectLayout } from '@/components/ProjectLayout'
 
 export default function Layout({ children, metadata }) {
+  const project = metadata?.project ?? {}
   return (
-    <ProjectLayout project={metadata.project}>
+    <ProjectLayout project={project}>
       {children}
     </ProjectLayout>
   )
