@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation'
 import { AppContext } from '@/app/providers'
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
-import { formatDate } from '@/lib/formatDate'
 
 function ArrowLeftIcon(props) {
   return (
@@ -39,38 +38,35 @@ export function ProjectLayout({ project, children }) {
               <ArrowLeftIcon className="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
             </button>
           )}
-          <project>
+
+          <div> {/* ✅ Replaced <project> with <div> */}
             <header className="flex flex-col">
               <h1 className="text-4xl font-regular tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
                 {project.title}
               </h1>
 
-              <div className='mt-8 flex flex-col text-sm text-zinc-600 dark:text-zinc-400 md: flex-row md: justify-between'>
-                
-                <div className="">
-                  <h6 className='text-xs'>Client</h6>
-                  <p className='font-medium'>{project.client}</p>
+              <div className="mt-8 flex flex-col text-sm text-zinc-600 dark:text-zinc-400 md:flex-row md:justify-between">
+                <div>
+                  <h6 className="text-xs">Client</h6>
+                  <p className="font-medium">{project.client}</p>
                 </div>
 
-                <div className="">
-                  <h6 className='text-xs mt-4 md: mt-0'>Role</h6>
-                  <p className='font-medium'>{project.role}</p>
+                <div>
+                  <h6 className="text-xs mt-4 md:mt-0">Role</h6>
+                  <p className="font-medium">{project.role}</p>
                 </div>
 
-                <div className="">
-                  <h6 className='text-xs mt-4 md: mt-0'>Duration</h6>
-                  <p className='font-medium'>{project.duration}</p>
+                <div>
+                  <h6 className="text-xs mt-4 md:mt-0">Duration</h6>
+                  <p className="font-medium">{project.duration}</p>
                 </div>
-
               </div>
-           
             </header>
 
             <Prose className="mt-8" data-mdx-content>
-
               {children}
             </Prose>
-          </project>
+          </div>
         </div>
       </div>
     </Container>
