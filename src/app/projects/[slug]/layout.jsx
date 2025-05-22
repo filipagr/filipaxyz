@@ -1,7 +1,7 @@
 import ProjectLayout from '@/components/ProjectLayout'
 
-export default function Layout({ children, metadata }) {
-  const project = metadata?.project ?? {}
+export default async function Layout({ children, params }) {
+  const { project } = await import(`../../projects/${params.slug}/page.mdx`)
 
   return (
     <ProjectLayout project={project}>

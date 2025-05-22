@@ -12,6 +12,12 @@ export async function generateStaticParams() {
     }))
 }
 
-export default function ProjectPage() {
-  return null
+export async function generateMetadata({ params }) {
+  const { metadata } = await import(`../../projects/${params.slug}/page.mdx`)
+  return metadata
+}
+
+export default async function ProjectPage({ params }) {
+  const { default: Content } = await import(`../../projects/${params.slug}/page.mdx`)
+  return <Content />
 }
