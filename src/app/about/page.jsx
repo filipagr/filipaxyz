@@ -74,7 +74,7 @@ export default function About() {
               When I am not working or studying, I&apos;ll probably be obsessing over something random, like ways to make great coffee, baking bread, Joni Mitchell or how it must be to live on a boat.
             </p>
             <p>
-              At the moment, I&apos;m exploring the potential of blockchain technology and decentralized storage at <a href="https://fil.org/">Filecoin Foundation</a>. Previously, I was at <a href="https://subvisual.com/">Subvisual</a>, helping early-stage web3 startups go from 0 to 1.
+              At the moment, I&apos;m exploring the potential of blockchain technology and decentralized storage at <a href="https://fil.org/" className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300 transition">Filecoin Foundation</a>. Previously, I was at <a href="https://subvisual.com/" className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300 transition">Subvisual</a>, helping early-stage web3 startups go from 0 to 1.
             </p>
             <p>
               I&apos;m also training for my sixth marathon in April, 2025.
