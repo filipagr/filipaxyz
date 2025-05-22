@@ -7,17 +7,29 @@ export async function generateStaticParams() {
 
   return files
     .filter((file) => fs.statSync(path.join(projectDir, file)).isDirectory())
+    .filter((dir) => dir !== '[slug]') // Exclude the [slug] directory itself
     .map((folderName) => ({
       slug: folderName,
     }))
 }
 
 export async function generateMetadata({ params }) {
-  const { metadata } = await import(`@/app/projects/${params.slug}/page.mdx`)
-  return metadata
+  try {
+    const { metadata } = await import(`@/app/projects/${params.slug}/page.mdx`)
+    return metadata
+  } catch (error) {
+    return {
+      title: 'Project Not Found',
+      description: 'This project could not be found.'
+    }
+  }
 }
 
 export default async function ProjectPage({ params }) {
-  const { default: Content } = await import(`@/app/projects/${params.slug}/page.mdx`)
-  return <Content />
+  try {
+    const { default: Content } = await import(`@/app/projects/${params.slug}/page.mdx`)
+    return <Content />
+  } catch (error) {
+    return <div>Project not found</div>
+  }
 }
