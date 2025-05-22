@@ -8,6 +8,14 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export
   },
+  // Disable dynamic features for static export
+  experimental: {
+    appDir: true,
+  },
+  // Configure static generation
+  env: {
+    NEXT_PUBLIC_SITE_URL: 'https://filipa.xyz',
+  },
 }
 
 module.exports = withMDX(nextConfig) 
