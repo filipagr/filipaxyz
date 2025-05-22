@@ -15,9 +15,22 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   try {
-    const { metadata } = await import(`@/app/projects/${params.slug}/page.mdx`)
-    return metadata
+    const module = await import(`@/app/projects/${params.slug}/page.mdx`)
+    const project = module.project || module.metadata?.project
+    
+    if (!project) {
+      return {
+        title: 'Project Not Found',
+        description: 'This project could not be found.'
+      }
+    }
+
+    return {
+      title: project.title,
+      description: project.description,
+    }
   } catch (error) {
+    console.error(`Error loading project metadata for ${params.slug}:`, error)
     return {
       title: 'Project Not Found',
       description: 'This project could not be found.'
@@ -30,6 +43,7 @@ export default async function ProjectPage({ params }) {
     const { default: Content } = await import(`@/app/projects/${params.slug}/page.mdx`)
     return <Content />
   } catch (error) {
+    console.error(`Error loading project content for ${params.slug}:`, error)
     return <div>Project not found</div>
   }
 }
