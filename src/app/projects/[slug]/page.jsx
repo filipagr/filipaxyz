@@ -13,11 +13,11 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { metadata } = await import(`../../projects/${params.slug}/page.mdx`)
+  const { metadata } = await import(`@/app/projects/${params.slug}/page.mdx`)
   return metadata
 }
 
 export default async function ProjectPage({ params }) {
-  const { default: Content } = await import(`../../projects/${params.slug}/page.mdx`)
+  const { default: Content } = await import(`@/app/projects/${params.slug}/page.mdx`)
   return <Content />
 }
