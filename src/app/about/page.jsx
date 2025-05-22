@@ -21,8 +21,6 @@ function SocialLink({ className, href, children, icon: Icon }) {
   )
 }
 
-
-
 function ArrowDownIcon(props) {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
@@ -36,12 +34,9 @@ function ArrowDownIcon(props) {
   )
 }
 
-
-
 export const metadata = {
   title: 'About',
-  description:
-    'Filipa',
+  description: 'Filipa',
 }
 
 export default function About() {
@@ -57,38 +52,36 @@ export default function About() {
               className="aspect-square rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />
 
-<Button href="@/files/CV_FilipaRibeiro_Dec2023.pdf" variant="secondary" className="group mt-6 w-full">
-Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+            <a 
+              href="/files/CV_FilipaRibeiro_Dec2023.pdf" 
+              download="CV_FilipaRibeiro.pdf"
+              className="group mt-6 w-full inline-flex items-center justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70"
+            >
+              Download CV
+              <ArrowDownIcon className="ml-2 h-4 w-4 stroke-zinc-400 transition group-hover:stroke-zinc-600 dark:group-hover:stroke-zinc-50" />
+            </a>
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-3xl font-regular tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
-          I&apos;m a Product Designer with a background in Graphic Design, currently based in Portugal.
+            I&apos;m a Product Designer with a background in Graphic Design, currently based in Portugal.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-            I have always been very interested in people: their thoughts, emotions and reactions in different situations. Design is the way I have found to explore this interest and to try to make the world a better place.
+              I have always been very interested in people: their thoughts, emotions and reactions in different situations. Design is the way I have found to explore this interest and to try to make the world a better place.
             </p>
             <p>
-            When I am not working or studying, I&apos;ll probably be obsessing over something random, like ways to make great coffee, baking bread, Joni Mitchell or how it must be to live on a boat.
+              When I am not working or studying, I&apos;ll probably be obsessing over something random, like ways to make great coffee, baking bread, Joni Mitchell or how it must be to live on a boat.
             </p>
             <p>
-            At the moment, I&apos;m exploring the potential of blockchain technology and decentralized storage at <a href="https://fil.org/">Filecoin Foundation</a>. Previously, I was at <a href="https://subvisual.com/">Subvisual</a>, helping early-stage web3 startups go from 0 to 1.
+              At the moment, I&apos;m exploring the potential of blockchain technology and decentralized storage at <a href="https://fil.org/">Filecoin Foundation</a>. Previously, I was at <a href="https://subvisual.com/">Subvisual</a>, helping early-stage web3 startups go from 0 to 1.
             </p>
             <p>
-            I&apos;m also training for my sixth marathon in April, 2025.
+              I&apos;m also training for my sixth marathon in April, 2025.
             </p>
           </div>
-
-      
-
         </div>
-
       </div>
-
     </Container>
-
   )
 }
