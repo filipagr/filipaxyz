@@ -16,6 +16,12 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: 'https://filipa.xyz',
   },
+  // Ensure static generation
+  staticPageGenerationTimeout: 120,
+  // Disable dynamic features
+  dynamicParams: false,
+  // Ensure all pages are static
+  trailingSlash: true,
 }
 
 module.exports = withMDX(nextConfig) 
