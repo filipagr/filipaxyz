@@ -13,8 +13,10 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://filipa.xyz',
   },
-  // Configure output directory for Netlify
-  distDir: 'out',
+  // Disable distDir override as Netlify handles this
+  // distDir: 'out',
+  // Add trailing slashes for consistency
+  trailingSlash: true,
 }
 
 module.exports = withMDX(nextConfig) 
