@@ -40,7 +40,7 @@ export default async function ProjectsIndex() {
 
   return (
     <SimpleLayout
-      title="A collection of my recent work in design and technology."
+      title="Selected projects"
     >
       <div className="flex flex-col gap-16">
         {projects.map((project) => (
