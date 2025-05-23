@@ -42,7 +42,7 @@ export function Footer() {
 
               <h6 className="text-sm font-medium text-zinc-400 dark:text-zinc-500 mb-2">Colophon</h6>
               <div className="text-xs font-regular text-zinc-400 dark:text-zinc-500">
-                  This website was designed and developed in 2023 by Filipa Ribeiro, using Spotlight Tailwind Template as a base. All assets are hosted by Netlify. Text is set in Manrope, designed by Mikhail Sharanda in 2018, and part of the Google Fonts library :)
+              This website was designed and developed in 2023 by Filipa Ribeiro, using the Spotlight Tailwind Template as a base and with the help of Cursor. All assets are hosted on Netlify. Text is set in Manrope, designed by Mikhail Sharanda in 2018 and available through the Google Fonts library. Last updated on May 23, 2025 :)
               </div>
             </div>
 
