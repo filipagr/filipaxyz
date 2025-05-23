@@ -4,6 +4,7 @@
 
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NODE_ENV = "production"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -11,16 +12,22 @@
 # Production context
 [context.production]
   command = "npm run build"
+  [context.production.environment]
+    NODE_ENV = "production"
+    NEXT_PUBLIC_SITE_URL = "https://filipa.xyz"
 
 # Staging context (deploys from staging branch)
 [context.staging]
-  command = "npm run build:staging"
+  command = "npm run build"
   [context.staging.environment]
+    NODE_ENV = "production"
     NEXT_PUBLIC_SITE_URL = "https://staging.filipa.xyz"
 
 # Deploy Preview context (PRs)
 [context.deploy-preview]
   command = "npm run build"
+  [context.deploy-preview.environment]
+    NODE_ENV = "production"
 
 [[headers]]
   for = "/*"
