@@ -9,13 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Disable dynamic features
-  experimental: {
-    appDir: true,
-  },
   // Static generation settings
   env: {
-    NEXT_PUBLIC_SITE_URL: 'https://filipa.xyz',
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://filipa.xyz',
   },
   // Configure output directory for Netlify
   distDir: 'out',
