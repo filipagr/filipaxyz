@@ -25,6 +25,19 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ArticlePage({ params }) {
-  const { default: Content } = await import(`@/app/articles/${params.slug}/page.mdx`)
-  return <Content />
+  try {
+    // Debug log
+    console.log('Rendering article page for slug:', params.slug)
+    
+    // Import both the Content and article data
+    const { default: Content, article } = await import(`@/app/articles/${params.slug}/page.mdx`)
+    
+    // Debug log
+    console.log('Successfully loaded MDX content and article data for:', params.slug)
+    
+    return <Content />
+  } catch (error) {
+    console.error(`Error loading article content for ${params.slug}:`, error)
+    return <div>Article not found</div>
+  }
 } 
