@@ -1,4 +1,5 @@
 import { getAllArticles } from '@/lib/articles'
+import { useEffect } from 'react'
 
 export async function generateStaticParams() {
   const articles = await getAllArticles()
@@ -35,7 +36,17 @@ export default async function ArticlePage({ params }) {
     // Debug log
     console.log('Successfully loaded MDX content and article data for:', params.slug)
     
-    return <Content />
+    // Create a client component that handles scroll restoration
+    const ArticleContent = () => {
+      useEffect(() => {
+        // Scroll to top when component mounts
+        window.scrollTo(0, 0)
+      }, [])
+
+      return <Content />
+    }
+    
+    return <ArticleContent />
   } catch (error) {
     console.error(`Error loading article content for ${params.slug}:`, error)
     return <div>Article not found</div>

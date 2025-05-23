@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { getAllProjects } from '@/lib/projects'
+import { useEffect } from 'react'
 
 export async function generateStaticParams() {
   const projectDir = path.join(process.cwd(), 'src/app/projects')
@@ -50,7 +51,17 @@ export default async function ProjectPage({ params }) {
     // Debug log
     console.log('Successfully loaded MDX content and project data for:', params.slug)
     
-    return <Content />
+    // Create a client component that handles scroll restoration
+    const ProjectContent = () => {
+      useEffect(() => {
+        // Scroll to top when component mounts
+        window.scrollTo(0, 0)
+      }, [])
+
+      return <Content />
+    }
+    
+    return <ProjectContent />
   } catch (error) {
     console.error(`Error loading project content for ${params.slug}:`, error)
     return <div>Project not found</div>
