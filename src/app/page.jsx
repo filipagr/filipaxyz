@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import clsx from 'clsx'
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { getAllProjects } from '@/lib/projects'
 import { formatDate } from '@/lib/formatDate'
@@ -36,7 +35,7 @@ function Project({ project }) {
 }
 
 export default async function Home() {
-  const projects = (await getAllProjects()).slice(0, 3)
+  const projects = await getAllProjects()
 
   return (
     <>
@@ -58,11 +57,6 @@ export default async function Home() {
             {projects.map((project) => (
               project && <Project key={project.slug} project={project} />
             ))}
-          </div>
-          <div className="flex justify-center mt-10">
-            <Button href="/projects">
-              View all projects
-            </Button>
           </div>
         </div>
       </Container>
