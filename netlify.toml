@@ -8,6 +8,20 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Production context
+[context.production]
+  command = "npm run build"
+
+# Staging context (deploys from staging branch)
+[context.staging]
+  command = "npm run build"
+  [context.staging.environment]
+    NEXT_PUBLIC_SITE_URL = "https://staging.filipa.xyz"
+
+# Deploy Preview context (PRs)
+[context.deploy-preview]
+  command = "npm run build"
+
 [[headers]]
   for = "/*"
   [headers.values]
