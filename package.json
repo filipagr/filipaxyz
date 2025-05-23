@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:staging": "NODE_ENV=staging next dev",
     "build": "next build && next export",
+    "build:staging": "NODE_ENV=staging next build",
     "start": "next start",
     "lint": "next lint"
   },
