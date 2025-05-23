@@ -32,7 +32,7 @@ function Project({ project }) {
 
 export const metadata = {
   title: 'Projects',
-  description: 'Selected projects',
+  description: 'A collection of my recent work.',
 }
 
 export default async function ProjectsIndex() {
