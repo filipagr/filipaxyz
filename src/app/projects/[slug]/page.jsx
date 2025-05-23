@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { getAllProjects } from '@/lib/projects'
 
 export async function generateStaticParams() {
   const projectDir = path.join(process.cwd(), 'src/app/projects')
@@ -15,7 +16,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   try {
-    const { project } = await import(`@/app/projects/${params.slug}/page.mdx`)
+    const projects = await getAllProjects()
+    const project = projects.find((p) => p.slug === params.slug)
     
     if (!project) {
       return {

@@ -22,17 +22,20 @@ async function importProject(projectFilename) {
 
 export async function getAllProjects() {
   try {
-    const projectFilenames = await glob('*/page.mdx', {
+    const projectFilenames = await glob(['*/page.mdx'], {
       cwd: path.join(process.cwd(), 'src/app/projects'),
-      ignore: ['[slug]/**'], // Explicitly ignore the [slug] directory
     })
 
-    const projects = await Promise.all(projectFilenames.map(importProject))
+    const projects = await Promise.all(
+      projectFilenames
+        .filter(filename => !filename.startsWith('[')) // Exclude dynamic route files
+        .map(importProject)
+    )
 
     // Filter out any null projects and sort by date
     return projects
       .filter(Boolean)
-      .sort((a, z) => +new Date(z.date) - +new Date(a.date))
+      .sort((a, z) => new Date(z.date) - new Date(a.date))
   } catch (error) {
     console.error('Error getting all projects:', error)
     return []
