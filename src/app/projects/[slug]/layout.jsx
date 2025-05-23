@@ -3,14 +3,8 @@ import { getAllProjects } from '@/lib/projects'
 
 export default async function Layout({ children, params }) {
   try {
-    // Get all projects and find the matching one
-    const projects = await getAllProjects()
-    
-    // Debug log
-    console.log('All projects:', projects.map(p => ({ title: p?.title, slug: p?.slug })))
-    console.log('Looking for slug:', params.slug)
-    
-    const project = projects.find((p) => p?.slug === params.slug)
+    // Import the project data directly from the MDX file
+    const { project } = await import(`@/app/projects/${params.slug}/page.mdx`)
     
     if (!project) {
       console.error('No project data found for slug:', params.slug)
@@ -20,11 +14,17 @@ export default async function Layout({ children, params }) {
       </div>
     }
 
+    // Add the slug to the project data
+    const projectWithSlug = {
+      ...project,
+      slug: params.slug,
+    }
+
     // Debug log
-    console.log('Found project:', project.title, 'for slug:', params.slug)
+    console.log('Found project:', projectWithSlug.title, 'for slug:', params.slug)
 
     return (
-      <ProjectLayout project={project}>
+      <ProjectLayout project={projectWithSlug}>
         {children}
       </ProjectLayout>
     )

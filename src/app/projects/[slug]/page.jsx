@@ -44,10 +44,11 @@ export default async function ProjectPage({ params }) {
     // Debug log
     console.log('Rendering project page for slug:', params.slug)
     
-    const { default: Content } = await import(`@/app/projects/${params.slug}/page.mdx`)
+    // Import both the Content and project data
+    const { default: Content, project } = await import(`@/app/projects/${params.slug}/page.mdx`)
     
     // Debug log
-    console.log('Successfully loaded MDX content for:', params.slug)
+    console.log('Successfully loaded MDX content and project data for:', params.slug)
     
     return <Content />
   } catch (error) {
