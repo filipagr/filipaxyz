@@ -14,7 +14,7 @@
 
 # Staging context (deploys from staging branch)
 [context.staging]
-  command = "npm run build"
+  command = "npm run build:staging"
   [context.staging.environment]
     NEXT_PUBLIC_SITE_URL = "https://staging.filipa.xyz"
 
