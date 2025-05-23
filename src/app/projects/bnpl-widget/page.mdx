@@ -1,0 +1,85 @@
+import Image from 'next/image'
+
+import projectimage from '@/images/bnpl-widget/bnpl_banner.webp'
+import image1 from '@/images/bnpl-widget/bnpl_1.webp'
+import image2 from '@/images/bnpl-widget/bnpl_2.webp'
+import image3 from '@/images/bnpl-widget/bnpl_3.webp'
+import image4 from '@/images/bnpl-widget/bnpl_4.webp'
+
+export const project = {
+  author: 'Filipa Ribeiro',
+  date: '2024-05-23',
+  title: 'Buy Now Pay Later NFT Widget',
+  description:
+    'A widget that enables NFT marketplaces to offer buy now pay later options to their users.',
+  thumbnail: {
+    src: projectimage.src,
+    width: 1200,
+    height: 400,
+  },
+  client: 'Protocol Labs',
+  duration: 'Mar 2024 - May 2024',
+  role: 'Product Designer',
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+  client: project.client,
+  duration: project.duration,
+  role: project.role,
+  project,
+}
+
+<Image src={projectimage} alt="BNPL Widget Banner" className="rounded-xl mb-10" />
+
+## Problem
+
+The NFT market has evolved significantly, with marketplaces offering increasingly sophisticated features to attract and retain users. However, one significant barrier to entry remains: the upfront cost of purchasing NFTs. Many potential collectors are deterred by having to pay the full amount immediately, especially for higher-value NFTs.
+
+<Image src={image1} alt="Problem illustration" className="rounded-xl my-8" />
+
+## Solution
+
+We developed a Buy Now Pay Later (BNPL) widget that can be easily integrated into any NFT marketplace. This solution allows buyers to:
+
+- Split their NFT purchases into manageable installments
+- Choose flexible payment plans
+- Maintain ownership rights while completing payments
+- Track their payment progress seamlessly
+
+<Image src={image2} alt="Solution overview" className="rounded-xl my-8" />
+
+## Process
+
+The development process focused on creating a widget that would be:
+
+1. **Easy to integrate** - Marketplace owners can implement the widget with minimal code changes
+2. **User-friendly** - Clear payment terms and intuitive interface for buyers
+3. **Secure** - Robust payment processing and ownership management
+4. **Flexible** - Customizable payment plans and terms
+
+<Image src={image3} alt="Development process" className="rounded-xl my-8" />
+
+## Implementation
+
+The widget was designed to be as non-intrusive as possible while providing all necessary information upfront. Key features include:
+
+- Clear display of payment plans and terms
+- Real-time calculation of installment amounts
+- Integrated wallet connection
+- Payment tracking dashboard
+- Email notifications for payment reminders
+
+<Image src={image4} alt="Implementation details" className="rounded-xl my-8" />
+
+## Results
+
+The BNPL widget has been successfully integrated into several major NFT marketplaces, leading to:
+
+- Increased sales volume
+- Higher average transaction values
+- Improved accessibility for new collectors
+- Positive user feedback
+
+The solution continues to evolve based on user feedback and marketplace requirements, with new features being added regularly. 
