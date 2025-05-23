@@ -17,6 +17,10 @@ const nextConfig = {
   // distDir: 'out',
   // Add trailing slashes for consistency
   trailingSlash: true,
+  // Enable app directory
+  experimental: {
+    appDir: false,
+  },
 }
 
 module.exports = withMDX(nextConfig) 
