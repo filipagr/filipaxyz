@@ -15,8 +15,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   try {
-    const module = await import(`@/app/projects/${params.slug}/page.mdx`)
-    const project = module.project || module.metadata?.project
+    const { project } = await import(`@/app/projects/${params.slug}/page.mdx`)
     
     if (!project) {
       return {

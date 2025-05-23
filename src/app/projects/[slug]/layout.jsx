@@ -1,11 +1,9 @@
 import ProjectLayout from '@/components/ProjectLayout'
 
 export default async function Layout({ children, params }) {
-  let project;
-  
   try {
-    const module = await import(`@/app/projects/${params.slug}/page.mdx`)
-    project = module.project || module.metadata?.project
+    const { project: projectData } = await import(`@/app/projects/${params.slug}/page.mdx`)
+    const project = projectData || null
     
     if (!project) {
       console.error('No project data found in MDX file')
