@@ -15,6 +15,9 @@ export default async function Layout({ children, params }) {
       </div>
     }
 
+    // Log for debugging
+    console.log('Found project:', project.title, 'for slug:', params.slug)
+
     return (
       <ProjectLayout project={project}>
         {children}

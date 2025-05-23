@@ -10,8 +10,11 @@ async function importProject(projectFilename) {
       return null
     }
 
+    // Extract the directory name as the slug
+    const slug = projectFilename.split('/')[0]
+    
     return {
-      slug: projectFilename.replace(/(\/page)?\.mdx$/, ''),
+      slug,
       ...project,
     }
   } catch (error) {
