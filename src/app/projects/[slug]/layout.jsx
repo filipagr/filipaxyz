@@ -5,7 +5,12 @@ export default async function Layout({ children, params }) {
   try {
     // Get all projects and find the matching one
     const projects = await getAllProjects()
-    const project = projects.find((p) => p.slug === params.slug)
+    
+    // Debug log
+    console.log('All projects:', projects.map(p => ({ title: p?.title, slug: p?.slug })))
+    console.log('Looking for slug:', params.slug)
+    
+    const project = projects.find((p) => p?.slug === params.slug)
     
     if (!project) {
       console.error('No project data found for slug:', params.slug)
@@ -15,7 +20,7 @@ export default async function Layout({ children, params }) {
       </div>
     }
 
-    // Log for debugging
+    // Debug log
     console.log('Found project:', project.title, 'for slug:', params.slug)
 
     return (

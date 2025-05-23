@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   try {
     const projects = await getAllProjects()
-    const project = projects.find((p) => p.slug === params.slug)
+    const project = projects.find((p) => p?.slug === params.slug)
     
     if (!project) {
       return {
@@ -41,7 +41,14 @@ export async function generateMetadata({ params }) {
 
 export default async function ProjectPage({ params }) {
   try {
+    // Debug log
+    console.log('Rendering project page for slug:', params.slug)
+    
     const { default: Content } = await import(`@/app/projects/${params.slug}/page.mdx`)
+    
+    // Debug log
+    console.log('Successfully loaded MDX content for:', params.slug)
+    
     return <Content />
   } catch (error) {
     console.error(`Error loading project content for ${params.slug}:`, error)
