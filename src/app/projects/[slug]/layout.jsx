@@ -1,12 +1,14 @@
 import ProjectLayout from '@/components/ProjectLayout'
+import { getAllProjects } from '@/lib/projects'
 
 export default async function Layout({ children, params }) {
   try {
-    const { project: projectData } = await import(`@/app/projects/${params.slug}/page.mdx`)
-    const project = projectData || null
+    // Get all projects and find the matching one
+    const projects = await getAllProjects()
+    const project = projects.find((p) => p.slug === params.slug)
     
     if (!project) {
-      console.error('No project data found in MDX file')
+      console.error('No project data found for slug:', params.slug)
       return <div className="container mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Project Not Found</h1>
         {children}
