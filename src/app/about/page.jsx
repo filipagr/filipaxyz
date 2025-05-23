@@ -12,9 +12,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-blue-500 dark:text-zinc-200 dark:hover:text-blue-400"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-blue-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -74,7 +74,7 @@ export default function About() {
               When I am not working or studying, I&apos;ll probably be obsessing over something random, like ways to make great coffee, baking bread, Joni Mitchell or how it must be to live on a boat.
             </p>
             <p>
-              At the moment, I&apos;m exploring the potential of blockchain technology and decentralized storage at <a href="https://fil.org/" className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300 transition">Filecoin Foundation</a>. Previously, I was at <a href="https://subvisual.com/" className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300 transition">Subvisual</a>, helping early-stage web3 startups go from 0 to 1.
+              At the moment, I&apos;m exploring the potential of blockchain technology and decentralized storage at <a href="https://fil.org/" className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition">Filecoin Foundation</a>. Previously, I was at <a href="https://subvisual.com/" className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition">Subvisual</a>, helping early-stage web3 startups go from 0 to 1.
             </p>
             <p>
               I&apos;m also training for my seventh marathon in September, 2025.
