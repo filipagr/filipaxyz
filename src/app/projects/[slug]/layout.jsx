@@ -4,15 +4,21 @@ import { getAllProjects } from '@/lib/projects'
 export default async function Layout({ children, params }) {
   try {
     let project;
+    let importError;
     
     try {
-      // First try to import from root projects directory
-      const importedProject = await import(`@/app/projects/${params.slug}/page.mdx`);
-      project = importedProject.project;
-    } catch (e) {
-      // If that fails, try importing from [slug] directory
+      // Try to import from [slug] directory first
       const importedProject = await import(`@/app/projects/[slug]/${params.slug}/page.mdx`);
       project = importedProject.project;
+    } catch (e) {
+      importError = e;
+      // If that fails, try importing from root directory
+      try {
+        const importedProject = await import(`@/app/projects/${params.slug}/page.mdx`);
+        project = importedProject.project;
+      } catch (e2) {
+        console.error('Failed to import from both locations:', e, e2);
+      }
     }
     
     if (!project) {
