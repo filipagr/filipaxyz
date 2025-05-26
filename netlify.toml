@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --verbose && NODE_DEBUG=* npm run build"
+  command = "npm install --no-optional && NODE_DEBUG=* npm run build"
   publish = ".next"
 
 [build.environment]
