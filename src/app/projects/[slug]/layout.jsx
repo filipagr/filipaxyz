@@ -3,23 +3,9 @@ import { getAllProjects } from '@/lib/projects'
 
 export default async function Layout({ children, params }) {
   try {
-    let project;
-    let importError;
-    
-    try {
-      // Try to import from [slug] directory first
-      const importedProject = await import(`@/app/projects/[slug]/${params.slug}/page.mdx`);
-      project = importedProject.project;
-    } catch (e) {
-      importError = e;
-      // If that fails, try importing from root directory
-      try {
-        const importedProject = await import(`@/app/projects/${params.slug}/page.mdx`);
-        project = importedProject.project;
-      } catch (e2) {
-        console.error('Failed to import from both locations:', e, e2);
-      }
-    }
+    // Get all projects and find the matching one
+    const projects = await getAllProjects()
+    const project = projects.find(p => p?.slug === params.slug)
     
     if (!project) {
       console.error('No project data found for slug:', params.slug)
@@ -29,17 +15,11 @@ export default async function Layout({ children, params }) {
       </div>
     }
 
-    // Add the slug to the project data
-    const projectWithSlug = {
-      ...project,
-      slug: params.slug,
-    }
-
     // Debug log
-    console.log('Found project:', projectWithSlug.title, 'for slug:', params.slug)
+    console.log('Found project:', project.title, 'for slug:', params.slug)
 
     return (
-      <ProjectLayout project={projectWithSlug}>
+      <ProjectLayout project={project}>
         {children}
       </ProjectLayout>
     )

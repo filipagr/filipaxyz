@@ -11,8 +11,9 @@ async function importProject(projectFilename) {
       return null
     }
 
-    // Get the directory name from the path (e.g., "ethlisbon" from "ethlisbon/page.mdx")
-    const slug = projectFilename.split('/')[0]
+    // Get the directory name from the path, handling both root and [slug] projects
+    const parts = projectFilename.split('/')
+    const slug = parts[parts.length - 2] // Get the directory name before page.mdx
 
     // Return the project with its slug
     return {
@@ -27,15 +28,15 @@ async function importProject(projectFilename) {
 
 export async function getAllProjects() {
   try {
-    // Get all MDX files in project directories
-    const projectFilenames = await glob(['*/page.mdx'], {
+    // Get all MDX files in both root and [slug] directories
+    const projectFilenames = await glob(['*/page.mdx', '[slug]/*/page.mdx'], {
       cwd: path.join(process.cwd(), 'src/app/projects'),
     })
 
     // Import all projects
     const projects = await Promise.all(
       projectFilenames
-        .filter(filename => !filename.startsWith('[')) // Exclude dynamic route files
+        .filter(filename => !filename.startsWith('[slug]/[')) // Only exclude dynamic route template files
         .map(importProject)
     )
 
