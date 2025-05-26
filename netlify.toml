@@ -1,11 +1,10 @@
 [build]
-  command = "npm install --no-optional && NODE_DEBUG=* npm run build"
-  publish = ".next"
+  command = "npm install --no-optional && npm run build"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "18"
-  NEXT_USE_NETLIFY_EDGE = "true"
-  DEBUG = "*"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
