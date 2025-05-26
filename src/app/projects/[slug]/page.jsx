@@ -3,10 +3,15 @@ import path from 'path'
 import { getAllProjects } from '@/lib/projects'
 
 export async function generateStaticParams() {
-  const projects = await getAllProjects()
-  return projects.map((project) => ({
-    slug: project.slug,
-  }))
+  const projectDir = path.join(process.cwd(), 'src/app/projects')
+  const files = fs.readdirSync(projectDir)
+
+  return files
+    .filter((file) => fs.statSync(path.join(projectDir, file)).isDirectory())
+    .filter((dir) => dir !== '[slug]') // Exclude the [slug] directory itself
+    .map((folderName) => ({
+      slug: folderName,
+    }))
 }
 
 export async function generateMetadata({ params }) {

@@ -3,8 +3,17 @@ import { getAllProjects } from '@/lib/projects'
 
 export default async function Layout({ children, params }) {
   try {
-    // Import the project data directly from the MDX file
-    const { project } = await import(`@/app/projects/${params.slug}/page.mdx`)
+    let project;
+    
+    try {
+      // First try to import from root projects directory
+      const module = await import(`@/app/projects/${params.slug}/page.mdx`);
+      project = module.project;
+    } catch (e) {
+      // If that fails, try importing from [slug] directory
+      const module = await import(`@/app/projects/[slug]/${params.slug}/page.mdx`);
+      project = module.project;
+    }
     
     if (!project) {
       console.error('No project data found for slug:', params.slug)
