@@ -7,12 +7,12 @@ export default async function Layout({ children, params }) {
     
     try {
       // First try to import from root projects directory
-      const module = await import(`@/app/projects/${params.slug}/page.mdx`);
-      project = module.project;
+      const importedProject = await import(`@/app/projects/${params.slug}/page.mdx`);
+      project = importedProject.project;
     } catch (e) {
       // If that fails, try importing from [slug] directory
-      const module = await import(`@/app/projects/[slug]/${params.slug}/page.mdx`);
-      project = module.project;
+      const importedProject = await import(`@/app/projects/[slug]/${params.slug}/page.mdx`);
+      project = importedProject.project;
     }
     
     if (!project) {
