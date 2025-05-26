@@ -3,6 +3,7 @@ import path from 'path'
 
 async function importProject(projectFilename) {
   try {
+    console.log('Attempting to import project:', projectFilename)
     // Import the project module
     const { project } = await import(`@/app/projects/${projectFilename}`)
     
@@ -13,7 +14,10 @@ async function importProject(projectFilename) {
 
     // Get the directory name from the path, handling both root and [slug] projects
     const parts = projectFilename.split('/')
-    const slug = parts[parts.length - 2] // Get the directory name before page.mdx
+    // If the path includes [slug], get the directory after it, otherwise get the first directory
+    const slug = parts.includes('[slug]') ? parts[parts.length - 2] : parts[0]
+    
+    console.log('Imported project:', { filename: projectFilename, slug, title: project.title })
 
     // Return the project with its slug
     return {
@@ -33,6 +37,8 @@ export async function getAllProjects() {
       cwd: path.join(process.cwd(), 'src/app/projects'),
     })
 
+    console.log('Found project files:', projectFilenames)
+
     // Import all projects
     const projects = await Promise.all(
       projectFilenames
@@ -41,12 +47,15 @@ export async function getAllProjects() {
     )
 
     // Debug log
-    console.log('Found projects:', projects.map(p => ({ title: p?.title, slug: p?.slug })))
+    console.log('Processed projects:', projects.map(p => ({ title: p?.title, slug: p?.slug })))
 
     // Filter out any null projects and sort by date
-    return projects
+    const sortedProjects = projects
       .filter(Boolean)
       .sort((a, z) => new Date(z.date) - new Date(a.date))
+
+    console.log('Final sorted projects:', sortedProjects.map(p => ({ title: p.title, slug: p.slug })))
+    return sortedProjects
   } catch (error) {
     console.error('Error getting all projects:', error)
     return []
