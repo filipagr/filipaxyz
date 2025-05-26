@@ -1,0 +1,84 @@
+import Image from 'next/image'
+import projectimage from '@/images/astralscan/astralscan_banner.webp'
+import image1 from '@/images/astralscan/astralscan_1.webp'
+import image2 from '@/images/astralscan/astralscan_2.webp'
+import image3 from '@/images/astralscan/astralscan_3.webp'
+
+export const project = {
+  author: 'Filipa Ribeiro',
+  date: '2025-03-06',
+  title: 'Astralscan',
+  description:
+    'A block explorer for the Astral Protocol.',
+  thumbnail: {
+    src: projectimage.src,
+    width: 1200,
+    height: 400,
+  },
+
+  client: 'Astral',
+  duration: 'March 2025 - ongoing',
+  role: 'Product Design',
+}
+
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+  client: project.client,
+  duration: project.duration,
+  role: project.role,
+  project,
+}
+
+<Image src={projectimage} alt="" />
+
+## Overview
+
+Astralscan is a block explorer built for the [Astral Protocol](https://www.astral.global/), a spatial extension of the decentralized web. It allows users to explore, verify, and interact with location-based attestations recorded onchain. The goal is to make the *where* of web3 as verifiable and accessible as the *what* and *when*.
+
+This project was born from a serendipitous collaboration during my time at [Kernel](https://www.kernel.community/), a community of web3 builders. There I met John from the Astral team, became fascinated with their vision, and volunteered to help bring spatial attestations to life through a better user experience.
+
+## Problem
+
+Astral had already developed a prototype called Logbook, which allowed users to create spatial attestations directly on the app. However, it lacked the ability to:
+
+- Visualize attestations across time, space, or chain
+- Filter or browse attestations in a meaningful way
+
+There was a clear need for a new interface designed to both visualize and organize spatial attestations and support future development through a unified component system.
+
+## Goals
+
+- Design a map-based and list-based explorer for attestations across different chains
+- Build a reusable and scalable component library
+- Enable users to explore, add, and verify entries with location, media, and metadata
+- Improve visual hierarchy and usability
+- Lay the groundwork for features like filters, tags, and sharing
+
+<Image src={image1} alt="" />
+
+## Solution
+
+The new app, Astralscan, will allow people to:
+
+- View all attestations on a global map
+- Browse entries in a sortable and filterable list view
+- Click on entries to see details, including:
+  - Location, date/time
+  - Media (e.g. image proofs)
+  - Description or memo
+  - Chain metadata
+- Create new attestations with a smoother, more guided UX
+
+<Image src={image2} alt="" />
+
+## Current Status & Next Steps
+
+This is an ongoing project. I’m currently:
+
+- Expanding the entry detail view to show additional metadata
+- Improving loading/empty states
+- Finalizing and documenting the component library
+
+<Image src={image3} alt="" />
