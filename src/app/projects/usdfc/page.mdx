@@ -1,0 +1,132 @@
+import Image from 'next/image'
+import projectimage from '@/images/usdfc/usdfc_banner.webp'
+import image1 from '@/images/usdfc/usdfc_1.webp'
+import image2 from '@/images/usdfc/usdfc_2.webp'
+import image3 from '@/images/usdfc/usdfc_3.webp'
+import image4 from '@/images/usdfc/usdfc_4.webp'
+import image5 from '@/images/usdfc/usdfc_5.webp'
+import image6 from '@/images/usdfc/usdfc_6.webp'
+
+export const project = {
+  author: 'Filipa Ribeiro',
+  date: '2024-12-03',
+  title: 'USDFC',
+  description:
+    'A redesigned interface for the first stablecoin on Filecoin, helping users manage troves and participate in stability pools.',
+  thumbnail: {
+    src: projectimage.src,
+    width: 1200,
+    height: 400,
+  },
+  client: 'Secured Finance / Filecoin Foundation',
+  duration: 'Dec 2024 - Ongoing',
+  role: 'Product Design',
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+  client: project.client,
+  duration: project.duration,
+  role: project.role,
+  project,
+}
+
+<Image src={projectimage} alt="" />
+
+
+## Overview
+
+USDFC is the first stablecoin built on the Filecoin network, created by [Secured Finance](https://secured.finance/). They created an app based on [Liquity](https://liquity.app/) that enables users to lock FIL as collateral in order to mint USDFC. It also offers a stability pool for protocol participants to help maintain solvency and earn rewards.
+
+To support its early development, **UXIT (User Experience Improvement Team)** at the Filecoin Foundation conducted a dogfooding session, stress-testing the product’s usability and documenting major issues, blockers, and areas of confusion. The findings — which were then organized and shared with the Secured Finance team through a [report](https://filecoin.notion.site/USDFC-Secured-Finance-Report-15f7631f282580158331c24b4dd1f709?pvs=4) — revealed the need for a full V2 redesign: not to change the core features, but to significantly improve the app’s look and feel, explain core concepts, and guide users through complex flows more effectively.
+
+<Image src={image2} alt="" />
+
+
+## Problem
+
+Our dogfooding session revealed that while the core functionality of USDFC was in place, the app presented significant usability barriers that could hinder adoption and trust, even for people with some technical familiarity. Major issues included:
+
+- Withdrawals and trove closure issues: Users encountered broken or inconsistent behavior when attempting to withdraw collateral or close troves. The interface would reset values unexpectedly, and the logic for required USDFC amounts wasn't clear, blocking key actions.
+  
+- Unclear value proposition: The platform didn’t clearly explain the benefits of borrowing USDFC or participating in the stability pool, leaving users unsure why they should engage with the protocol at all.
+
+- No wallet-free preview mode: Requiring wallet connection before exploring the app caused trust issues. Users wanted a way to preview the interface and learn about the product without connecting their wallet.
+
+- Lack of risk context: Terms like “Collateral Ratio,” “Liquidation Reserve,” and “Risky Troves” were shown without helpful context or tooltips, making it difficult to understand how the system works and what users should pay attention to.
+
+- Broken or missing feedback: Actions like "Pay Now" or “Deposit” often lacked success confirmation, while slow transactions (sometimes over 2 minutes) left users wondering if anything was happening. There were no visible reminders to confirm actions in wallets like MetaMask.
+
+- Accessibility and terminology gaps: Some terms like "Trove" and "Fixed Income" felt unclear or overly technical. Icons lacked tooltips, focus states were missing for keyboard users, and buttons were too small to meet accessibility standards.
+
+These issues made the app appear unstable and unapproachable, especially for those unfamiliar with DeFi.
+
+
+<Image src={image3} alt="" />
+
+## Goals
+
+The redesign had several goals:
+
+- Keep existing features (trove creation to borrow USDFC, and depositing in the stability pool);
+- Redesign the interface to be cleaner, clearer, and more consistent;
+- Explain key terms and risks within the app, not just in external docs;
+- Improve trust and clarity by addressing broken flows, adding feedback, and better communicating what's happening behind the scenes;
+- Reduce onboarding friction by allowing limited access before wallet connection;
+- Build a consistent and reusable component system for future scalability;
+- Make the app accessible to a wider range of users, from seasoned DeFi natives to newer participants in the Filecoin ecosystem.
+
+<Image src={imag4} alt="" />
+
+## Process
+
+Using insights from the dogfooding session, I mapped updated user journeys for:
+
+- Opening a trove and borrowing USDFC;
+- Viewing and managing active troves;
+- Participating in the stability pool;
+- Viewing system stats and protocol health.
+
+Each flow was annotated with pain points from the dogfooding report and layered with new UX requirements (tooltips, confirmations, success/error states).
+
+A new component library was then created in Figma aligned with Filecoin Foundation accessibility standards. Key updates included:
+
+- Redesigned modals, buttons, input sliders, and status indicators;
+- Tooltips and icon labels for financial terms;
+- Accessible focus states and minimum touch targets;
+- Clear visual hierarchy to improve scannability.
+
+The key interface copy now:
+
+- Uses plain language for complex terms;
+- Includes call-to-action prompts for each page;
+- Clarifies the purpose of specific actions;
+- Provides real-time feedback of what's happening (e.g. “Transaction pending, please confirm in wallet”).
+
+<Image src={image5} alt="" />
+
+
+## Solution Highlights
+
+- Trove creation and management redesign: Visual improvements show collateral ratio health clearly, include action-based guidance, and add success messages when borrowing, updating or closing a position.
+
+- Pre-connection state: Now everyone is able to see what the app does without connecting a wallet.
+
+- Better feedback and progress indicators: Added loaders, wallet confirmation prompts, and visual status updates to reduce confusion during long-running operations.
+
+- Terminology support: Added descriptions, tooltips and simplified phrasing for terms like "Stability Pool," "Liquidation Reserve," and "Risky Troves."
+
+- Accessibility upgrades: All buttons now support keyboard interaction, icons are labeled, and touch targets meet WCAG standards.
+
+
+## Next Steps
+
+This collaboration is still ongoing. The next steps include:
+
+- Adding new features like supporting staking of other tokens;
+- Preparing and running usability testing rounds with both new and experienced people;
+- Supporting development with design QA and iteration based on feedback.
+
+
+<Image src={image6} alt="" />
