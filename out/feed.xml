@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Filipa Ribeiro</title>
+        <link>https://filipa.xyz</link>
+        <description>Some thoughts on design, product, web3, or life in general.</description>
+        <lastBuildDate>Tue, 27 May 2025 13:20:54 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>Filipa Ribeiro</title>
+            <url>https://filipa.xyz/favicon.ico</url>
+            <link>https://filipa.xyz</link>
+        </image>
+        <copyright>All rights reserved 2025</copyright>
+        <item>
+            <title><![CDATA[Thoughts on Designing for Web3]]></title>
+            <link>https://filipa.xyz/articles/thoughts-designing-web3</link>
+            <guid>https://filipa.xyz/articles/thoughts-designing-web3</guid>
+            <pubDate>Tue, 14 Nov 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[In the last few years, there has been a lot of discussion about Web3, blockchain, and cryptocurrencies. Even more so about the potential changes in socioeconomic dynamics that may arise and the implications they may have for our future as humanity and the future of our planet. But what role do we, as designers, play in this movement, and how can we better reflect on our practice to create a more promising future for all living beings?]]></content:encoded>
+            <author>hello@filipa.xyz (Filipa Ribeiro)</author>
+        </item>
+    </channel>
+</rss>

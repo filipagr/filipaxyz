@@ -1,0 +1,20 @@
+{
+  "/favicon.ico/route": "/favicon.ico",
+  "/_not-found": "/_not-found",
+  "/page": "/",
+  "/feed.xml/route": "/feed.xml",
+  "/articles/page": "/articles",
+  "/about/page": "/about",
+  "/projects/page": "/projects",
+  "/articles/thoughts-designing-web3/page": "/articles/thoughts-designing-web3",
+  "/projects/coffeeline/page": "/projects/coffeeline",
+  "/projects/astralscan/page": "/projects/astralscan",
+  "/projects/ethlisbon/page": "/projects/ethlisbon",
+  "/projects/fiptracker/page": "/projects/fiptracker",
+  "/projects/impactevaluator/page": "/projects/impactevaluator",
+  "/projects/saturn/page": "/projects/saturn",
+  "/projects/usdfc/page": "/projects/usdfc",
+  "/projects/voicedeck/page": "/projects/voicedeck",
+  "/articles/[slug]/page": "/articles/[slug]",
+  "/projects/[slug]/page": "/projects/[slug]"
+}

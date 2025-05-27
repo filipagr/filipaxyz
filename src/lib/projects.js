@@ -12,10 +12,9 @@ async function importProject(projectFilename) {
       return null
     }
 
-    // Get the directory name from the path, handling both root and [slug] projects
+    // Get the directory name from the path
     const parts = projectFilename.split('/')
-    // If the path includes [slug], get the directory after it, otherwise get the first directory
-    const slug = parts.includes('[slug]') ? parts[parts.length - 2] : parts[0]
+    const slug = parts[0] // Always get the first directory name as the slug
     
     console.log('Imported project:', { filename: projectFilename, slug, title: project.title })
 

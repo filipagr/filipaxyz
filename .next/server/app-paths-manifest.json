@@ -1,0 +1,20 @@
+{
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found": "app/_not-found.js",
+  "/page": "app/page.js",
+  "/feed.xml/route": "app/feed.xml/route.js",
+  "/articles/page": "app/articles/page.js",
+  "/about/page": "app/about/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/articles/thoughts-designing-web3/page": "app/articles/thoughts-designing-web3/page.js",
+  "/projects/coffeeline/page": "app/projects/coffeeline/page.js",
+  "/projects/astralscan/page": "app/projects/astralscan/page.js",
+  "/projects/ethlisbon/page": "app/projects/ethlisbon/page.js",
+  "/projects/fiptracker/page": "app/projects/fiptracker/page.js",
+  "/projects/impactevaluator/page": "app/projects/impactevaluator/page.js",
+  "/projects/saturn/page": "app/projects/saturn/page.js",
+  "/projects/usdfc/page": "app/projects/usdfc/page.js",
+  "/projects/voicedeck/page": "app/projects/voicedeck/page.js",
+  "/articles/[slug]/page": "app/articles/[slug]/page.js",
+  "/projects/[slug]/page": "app/projects/[slug]/page.js"
+}
