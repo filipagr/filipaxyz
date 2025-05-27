@@ -6,6 +6,8 @@ import image3 from '@/images/usdfc/usdfc_3.webp'
 import image4 from '@/images/usdfc/usdfc_4.webp'
 import image5 from '@/images/usdfc/usdfc_5.webp'
 import image6 from '@/images/usdfc/usdfc_6.webp'
+import image7 from '@/images/usdfc/usdfc_7.webp'
+import image8 from '@/images/usdfc/usdfc_8.webp'
 
 export const project = {
   author: 'Filipa Ribeiro',
@@ -41,6 +43,7 @@ USDFC is the first stablecoin built on the Filecoin network, created by [Secured
 
 To support its early development, UXIT (User Experience Improvement Team) at the Filecoin Foundation conducted a dogfooding session, stress-testing the product’s usability and documenting major issues, blockers, and areas of confusion. The findings were then organized and shared with the Secured Finance team through a [report](https://filecoin.notion.site/USDFC-Secured-Finance-Report-15f7631f282580158331c24b4dd1f709?pvs=4), and revealed the need for a full V2 redesign: not to change the core features, but to significantly improve the app’s look and feel, explain core concepts, and guide people through complex flows more effectively.
 
+<Image src={image1} alt="" />
 
 ## Problem
 
@@ -60,6 +63,8 @@ Our dogfooding session revealed that while the core functionality of USDFC was i
 
 These issues made the app appear unstable and unapproachable, especially for those unfamiliar with DeFi.
 
+<Image src={image2} alt="" />
+
 ## Goals
 
 The redesign had several goals:
@@ -72,7 +77,7 @@ The redesign had several goals:
 - Build a consistent and reusable component system for future scalability;
 - Make the app accessible to a wider range of people, from seasoned DeFi natives to newer participants in the Filecoin ecosystem.
 
-<Image src={image1} alt="" />
+<Image src={image3} alt="" />
 
 ## Process
 
@@ -85,7 +90,7 @@ Using insights from the dogfooding session, I mapped updated user journeys for:
 
 Each flow was annotated with pain points from the dogfooding report and layered with new UX requirements (tooltips, confirmations, success/error states).
 
-<Image src={image2} alt="" />
+<Image src={image4} alt="" />
 
 A new component library was then created in Figma aligned with Filecoin Foundation accessibility standards. Key updates included:
 
@@ -94,7 +99,7 @@ A new component library was then created in Figma aligned with Filecoin Foundati
 - Accessible focus states and minimum touch targets;
 - Clear visual hierarchy to improve scannability.
 
-<Image src={image3} alt="" />
+<Image src={image5} alt="" />
 
 The key interface copy now:
 
@@ -103,8 +108,7 @@ The key interface copy now:
 - Clarifies the purpose of specific actions;
 - Provides real-time feedback of what's happening (e.g. “Transaction pending, please confirm in wallet”).
 
-<Image src={image4} alt="" />
-
+<Image src={image6} alt="" />
 
 ## Solution Highlights
 
@@ -118,7 +122,7 @@ The key interface copy now:
 
 - **Accessibility upgrades:** All buttons now support keyboard interaction, icons are labeled, and touch targets meet WCAG standards.
 
-<Image src={image5} alt="" />
+<Image src={image7} alt="" />
 
 ## Next Steps
 
@@ -129,4 +133,4 @@ This collaboration is still ongoing. The next steps include:
 - Supporting development with design QA and iteration based on feedback.
 
 
-<Image src={image6} alt="" />
+<Image src={image8} alt="" />
