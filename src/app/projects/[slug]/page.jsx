@@ -4,14 +4,27 @@ import { getAllProjects } from '@/lib/projects'
 
 export async function generateStaticParams() {
   const projectDir = path.join(process.cwd(), 'src/app/projects')
-  const files = fs.readdirSync(projectDir)
-
-  return files
+  const slugDir = path.join(projectDir, '[slug]')
+  
+  // Get projects from root directory
+  const rootFiles = fs.readdirSync(projectDir)
+  const rootProjects = rootFiles
     .filter((file) => fs.statSync(path.join(projectDir, file)).isDirectory())
     .filter((dir) => dir !== '[slug]') // Exclude the [slug] directory itself
     .map((folderName) => ({
       slug: folderName,
     }))
+
+  // Get projects from [slug] directory
+  const slugFiles = fs.readdirSync(slugDir)
+  const slugProjects = slugFiles
+    .filter((file) => fs.statSync(path.join(slugDir, file)).isDirectory())
+    .map((folderName) => ({
+      slug: folderName,
+    }))
+
+  // Combine both sets of projects
+  return [...rootProjects, ...slugProjects]
 }
 
 export async function generateMetadata({ params }) {
