@@ -80,7 +80,7 @@ module.exports = function typographyStyles({ theme }) {
         // Headings
         'h2, h3': {
           color: 'var(--tw-prose-headings)',
-          fontWeight: theme('fontWeight.semibold'),
+          fontWeight: theme('fontWeight.regular'),
         },
         h2: {
           fontSize: theme('fontSize.xl')[0],
