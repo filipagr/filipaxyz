@@ -71,6 +71,12 @@ export default function About() {
               I have always been very interested in people: their thoughts, emotions and reactions in different situations. Design is the way I have found to explore this interest and to try to make the world a better place.
             </p>
             <p>
+            I hold a BA (Hons) in Graphic Communication Design from Central Saint Martins, University of the Arts London. 
+            </p>
+            <p>
+              Building products that are thoughtful and well-crafted is something I genuinely enjoy. I'm drawn to the full product development journey: from early discovery to the creation of polished interfaces. Designers should be involved in product strategy discussions, not just designing what’s asked of us, but questioning the why behind the decisions. There's a deep satisfaction in crafting interfaces that are not only intuitive and solve real problems, but also feel delightful through visual detail and care. When there’s a high level of attention to detail, people might not notice each element, but they do feel that everything just works, and paraphrasing <a href="https://youtu.be/wLb9g_8r-mE?si=_gObT8iz3nfY8O5T" className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition">Jony Ive</a>: they can sense that someone cared about them.
+            </p>
+            <p>
               When I am not working or studying, I&apos;ll probably be obsessing over something random, like ways to make great coffee, baking bread, Joni Mitchell or how it must be to live on a boat.
             </p>
             <p>
