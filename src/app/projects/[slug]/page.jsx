@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import { getAllProjects } from '@/lib/projects'
-import ProjectLayout from '@/components/ProjectLayout'
 
 export async function generateStaticParams() {
   const projectDir = path.join(process.cwd(), 'src/app/projects')
@@ -64,11 +63,7 @@ export default async function ProjectPage({ params }) {
     // Debug log
     console.log('Successfully loaded MDX content and project data for:', params.slug)
     
-    return (
-      <ProjectLayout project={project}>
-        <Content />
-      </ProjectLayout>
-    )
+    return <Content />
   } catch (error) {
     console.error(`Error loading project content for ${params.slug}:`, error)
     return <div>Project not found</div>
