@@ -32,7 +32,7 @@ async function importProject(projectFilename) {
 export async function getAllProjects() {
   try {
     // Get all MDX files in both root and [slug] directories
-    const projectFilenames = await glob(['*/page.mdx', '[slug]/*/page.mdx'], {
+    const projectFilenames = await glob(['*/page.mdx'], {
       cwd: path.join(process.cwd(), 'src/app/projects'),
     })
 

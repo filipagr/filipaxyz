@@ -290,8 +290,7 @@ async function getAllProjects() {
     try {
         // Get all MDX files in both root and [slug] directories
         const projectFilenames = await fast_glob__WEBPACK_IMPORTED_MODULE_0___default()([
-            "*/page.mdx",
-            "[slug]/*/page.mdx"
+            "*/page.mdx"
         ], {
             cwd: path__WEBPACK_IMPORTED_MODULE_1___default().join(process.cwd(), "src/app/projects")
         });
